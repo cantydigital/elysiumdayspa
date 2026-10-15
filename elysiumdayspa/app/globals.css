@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-figtree), system-ui, sans-serif;
+  --font-serif: var(--font-cormorant), Georgia, serif;
+
+  /* Elysium palette */
+  --color-canvas: #eef0ec;
+  --color-band: #e3e8e2;
+  --color-sage: #d9e0d9;
+  --color-placeholder: #c5d0c7;
+  --color-line: #d3d9d3;
+  --color-divider: #e1e5e0;
+  --color-rule: #b9c4bc;
+
+  --color-ink: #1e2723;
+  --color-ink-deep: #0f1a16;
+  --color-forest: #23352f;
+  --color-pine: #3a4e46;
+  --color-moss: #34443d;
+  --color-body: #3c4a44;
+  --color-muted: #4a5a53;
+
+  --color-mist: #dce3dc;
+  --color-fog: #c9d3cc;
+  --color-ash: #a7b3ac;
+
+  --color-accent: #7a5c2e;
+  --color-gold: #d2b27a;
+
+  /* Motion */
+  --ease-calm: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --animate-fade-up: fade-up 1s var(--ease-calm) both;
+  --animate-fade-in: fade-in 1.2s var(--ease-calm) both;
+  --animate-unveil: unveil 1.4s var(--ease-calm) both;
+  --animate-float: float 6s ease-in-out infinite;
+  /* "backwards" so hover transforms take over once it finishes. */
+  --animate-settle: settle 2.4s var(--ease-calm) 200ms backwards;
+
+  @keyframes settle {
+    from {
+      scale: 1.15;
+    }
+    to {
+      scale: 1;
+    }
+  }
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Wipes an element in from the bottom edge, like a curtain lifting. */
+  @keyframes unveil {
+    from {
+      clip-path: inset(100% 0 0 0);
+    }
+    to {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Keep anchored sections clear of the sticky header. */
+    scroll-padding-top: 88px;
+  }
+
+  @media (width < 40rem) {
+    html {
+      scroll-padding-top: 0;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  a {
+    color: var(--color-forest);
+  }
+
+  a:hover {
+    color: var(--color-ink-deep);
+  }
+}
