@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Cormorant_Garamond, Figtree } from "next/font/google";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import { SITE_URL } from "./content";
 import "./globals.css";
 
 const figtree = Figtree({
@@ -17,6 +18,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Elysium Day Spa — Sydney",
     template: "%s · Elysium Day Spa",

@@ -40,3 +40,9 @@ export const POST_QUERY = defineQuery(
 );
 
 export const POST_SLUGS_QUERY = defineQuery(`*[${published}].slug.current`);
+
+export type PostSitemapEntry = { slug: string; updatedAt: string };
+
+export const POST_SITEMAP_QUERY = defineQuery(
+  `*[${published}] | order(publishedAt desc) { "slug": slug.current, "updatedAt": _updatedAt }`,
+);

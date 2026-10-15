@@ -30,6 +30,11 @@ export const loungePhoto: Photo = {
   alt: "A bowl of herbal tea surrounded by green leaves",
 };
 
+export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://elysiumdayspa.com.au").replace(
+  /\/$/,
+  "",
+);
+
 export const PHONE = "(02) 5550 4821";
 export const EMAIL = "hello@elysiumdayspa.com.au";
 
