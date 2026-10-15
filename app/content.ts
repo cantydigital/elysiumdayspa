@@ -39,6 +39,7 @@ export const navLinks = [
   { href: "/#memberships", label: "Memberships" },
   { href: "/#gifts", label: "Gift cards" },
   { href: "/#visit", label: "Visit" },
+  { href: "/blog", label: "Journal" },
 ];
 
 export const treatments: Treatment[] = [
