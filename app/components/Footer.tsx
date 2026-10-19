@@ -51,7 +51,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="mx-auto flex max-w-[1280px] flex-wrap justify-between gap-3 px-6 pt-5 pb-8 text-[13px] text-ash">
-        <span>© 2026 Elysium Day Spa · ABN 00 000 000 000</span>
+        <span>© 2026 Elysium Day Spa</span>
         <nav aria-label="Policies" className="flex flex-wrap gap-x-2">
           {policyLinks.map((link, i) => (
             <span key={link.href} className="flex gap-2">
