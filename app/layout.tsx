@@ -25,6 +25,12 @@ export const metadata: Metadata = {
   },
   description:
     "Unhurried massage, facials and body rituals in a light-filled Paddington terrace, a short stroll from Oxford Street.",
+  openGraph: {
+    type: "website",
+    siteName: "Elysium Day Spa",
+    locale: "en_AU",
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

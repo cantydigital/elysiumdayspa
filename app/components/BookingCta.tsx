@@ -1,4 +1,3 @@
-import { PHONE } from "../content";
 import Reveal from "./Reveal";
 import { ButtonLink } from "./ui";
 
@@ -18,8 +17,8 @@ export default function BookingCta() {
           <ButtonLink href="#book" variant="light" arrow>
             Book online
           </ButtonLink>
-          <ButtonLink href={`tel:${PHONE.replace(/[^\d]/g, "")}`} variant="outline-light">
-            Call {PHONE}
+          <ButtonLink href="/#visit" variant="outline-light">
+            Find us
           </ButtonLink>
         </div>
       </Reveal>

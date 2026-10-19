@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { EMAIL, PHONE } from "../content";
+import { EMAIL } from "../content";
 import Reveal from "./Reveal";
 import { Eyebrow, SectionTitle } from "./ui";
 
@@ -39,10 +39,6 @@ export default function Visit() {
           Ave.
         </Detail>
         <Detail label="Contact">
-          <a href={`tel:${PHONE.replace(/[^\d]/g, "")}`} className="text-body hover:text-forest">
-            {PHONE}
-          </a>{" "}
-          ·{" "}
           <a href={`mailto:${EMAIL}`} className="text-body hover:text-forest">
             {EMAIL}
           </a>

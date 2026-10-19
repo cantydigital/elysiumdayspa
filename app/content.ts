@@ -35,7 +35,6 @@ export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://elysiumday
   "",
 );
 
-export const PHONE = "(02) 5550 4821";
 export const EMAIL = "hello@elysiumdayspa.com.au";
 
 export const navLinks = [

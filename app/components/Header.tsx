@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { PHONE, navLinks } from "../content";
+import { navLinks } from "../content";
 import { ButtonLink, LogoIcon, UnderlineLink } from "./ui";
 
 export default function Header() {
@@ -9,15 +9,7 @@ export default function Header() {
       <div className="bg-forest text-[13px] text-mist">
         <div className="mx-auto flex max-w-[1280px] flex-wrap justify-between gap-x-6 gap-y-2 px-6 py-2.5">
           <span>Open 7 days · Mon–Fri 9am–8pm · Sat–Sun 9am–6pm</span>
-          <span className="flex flex-wrap gap-6">
-            <a
-              href={`tel:${PHONE.replace(/[^\d]/g, "")}`}
-              className="text-mist no-underline transition-colors hover:text-white"
-            >
-              {PHONE}
-            </a>
-            <span>Paddington, Sydney</span>
-          </span>
+          <span>Paddington, Sydney</span>
         </div>
       </div>
 

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import PolicyPage, { type PolicySection } from "../components/PolicyPage";
-import { EMAIL, PHONE, POLICY_UPDATED } from "../content";
+import { EMAIL, POLICY_UPDATED } from "../content";
 
 export const metadata: Metadata = {
   title: "Cancellation policy",
@@ -122,10 +122,6 @@ const sections: PolicySection[] = [
     title: "How to cancel or reschedule",
     body: (
       <ul>
-        <li>
-          Call us on <a href={`tel:${PHONE.replace(/[^\d]/g, "")}`}>{PHONE}</a> during opening
-          hours.
-        </li>
         <li>
           Email <a href={`mailto:${EMAIL}`}>{EMAIL}</a> — notice is counted from when we receive
           your email.

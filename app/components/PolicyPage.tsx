@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { EMAIL, PHONE, policyLinks } from "../content";
+import { EMAIL, policyLinks } from "../content";
 import Reveal from "./Reveal";
 import { Eyebrow } from "./ui";
 
@@ -105,11 +105,7 @@ export default function PolicyPage({ title, path, updated, intro, sections }: Po
             <div className="flex flex-col gap-3 rounded-[20px] bg-white p-10 max-sm:p-7">
               <h2 className="m-0 font-serif text-[28px] font-medium">Questions?</h2>
               <p className="m-0 text-body">
-                Call us on{" "}
-                <a href={`tel:${PHONE.replace(/[^\d]/g, "")}`} className="font-medium">
-                  {PHONE}
-                </a>{" "}
-                or email{" "}
+                Email us at{" "}
                 <a href={`mailto:${EMAIL}`} className="font-medium">
                   {EMAIL}
                 </a>{" "}
